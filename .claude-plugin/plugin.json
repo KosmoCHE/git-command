@@ -1,0 +1,9 @@
+{
+  "name": "git-command",
+  "version": "1.0.0",
+  "description": "Git workflow commands using Conventional Commits format, including commit, push-pr, amend, squash, and branch cleanup",
+  "author": {
+    "name": "KosmoCHE"
+  },
+  "license": "MIT"
+}
