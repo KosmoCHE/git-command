@@ -1,6 +1,9 @@
 ---
-allowed-tools: Bash(git log:*), Bash(git reset:*), Bash(git add:*), Bash(git commit:*), Bash(git diff:*), Bash(git status:*), Bash(git merge-base:*), Bash(git branch:*)
+name: squash
 description: Squash multiple commits into one
+disable-model-invocation: false
+argument-hint: optional number of commits to squash
+allowed-tools: Bash(git log:*), Bash(git reset:*), Bash(git add:*), Bash(git commit:*), Bash(git diff:*), Bash(git status:*), Bash(git merge-base:*), Bash(git branch:*)
 ---
 
 ## Context
@@ -41,3 +44,5 @@ Squash multiple commits on the current branch into a single commit.
 - Use HEREDOC for the commit message
 
 Do not use any other tools or do anything else besides the squash operation.
+
+$ARGUMENTS

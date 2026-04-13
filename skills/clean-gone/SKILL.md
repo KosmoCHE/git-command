@@ -1,6 +1,8 @@
 ---
-allowed-tools: Bash(git branch:*), Bash(git worktree:*), Bash(git fetch:*)
+name: clean-gone
 description: Clean up local branches deleted from remote
+disable-model-invocation: false
+allowed-tools: Bash(git branch:*), Bash(git worktree:*), Bash(git fetch:*)
 ---
 
 ## Your task
@@ -41,3 +43,5 @@ Clean up local branches that have been deleted from the remote (marked as `[gone
    ```
 
 If no branches are marked as [gone], report that no cleanup was needed.
+
+$ARGUMENTS

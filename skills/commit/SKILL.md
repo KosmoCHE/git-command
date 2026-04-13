@@ -1,6 +1,9 @@
 ---
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
+name: commit
 description: Create a git commit using Conventional Commits format
+disable-model-invocation: false
+argument-hint: optional message or instructions
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
 ---
 
 ## Context
@@ -8,7 +11,7 @@ description: Create a git commit using Conventional Commits format
 - Current git status: !`git status`
 - Current git diff (staged and unstaged changes): !`git diff HEAD`
 - Current branch: !`git branch --show-current`
-- Recent commits: !`git log --oneline -10`
+- Recent commits: !`git log --oneline -5 2>/dev/null`
 
 ## Your task
 
@@ -45,3 +48,5 @@ Based on the above changes, create a single git commit using **Conventional Comm
 - Always pass the commit message via a HEREDOC for correct formatting
 
 You have the capability to call multiple tools in a single response. Stage and create the commit using a single message. Do not use any other tools or do anything else. Do not send any other text or messages besides these tool calls.
+
+$ARGUMENTS

@@ -1,6 +1,9 @@
 ---
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
+name: amend
 description: Amend the most recent commit
+disable-model-invocation: false
+argument-hint: optional new commit message
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
 ---
 
 ## Context
@@ -23,3 +26,5 @@ Amend the most recent commit:
 **Warning**: Do NOT amend if the commit has already been pushed to a shared remote branch. Check with `git status` for ahead/behind info. If already pushed, warn the user and stop.
 
 You have the capability to call multiple tools in a single response. Stage and amend using a single message. Do not use any other tools or do anything else. Do not send any other text or messages besides these tool calls.
+
+$ARGUMENTS
